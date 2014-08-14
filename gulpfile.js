@@ -27,6 +27,8 @@ var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var pagespeed = require('psi');
 var reload = browserSync.reload;
+var jekyll = require('gulp-jekyll');
+var deploy = require("gulp-gh-pages");
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -98,24 +100,10 @@ gulp.task('styles', function () {
 gulp.task('html', function () {
   var assets = $.useref.assets({searchPath: '{.tmp,app}'});
 
-  return gulp.src('app/**/*.html')
+  return gulp.src('.jekyll/**/*.html')
     .pipe(assets)
     // Concatenate And Minify JavaScript
     .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
-    // Remove Any Unused CSS
-    // Note: If not using the Style Guide, you can delete it from
-    // the next line to only include styles your project uses.
-    .pipe($.if('*.css', $.uncss({
-      html: [
-        'app/index.html',
-        'app/styleguide/index.html'
-      ],
-      // CSS Selectors for UnCSS to ignore
-      ignore: [
-        '.navdrawer-container.open',
-        /.app-bar.open/
-      ]
-    })))
     // Concatenate And Minify Styles
     .pipe($.if('*.css', $.csso()))
     .pipe(assets.restore())
@@ -129,8 +117,27 @@ gulp.task('html', function () {
     .pipe($.size({title: 'html'}));
 });
 
+// Jekyll
+gulp.task('jekyll', function() {
+  return gulp.src(['.app/index.html', './app/_layouts/*.html', './app/_posts/*.{markdown,md}'])
+    .pipe(jekyll({
+      source: './app',
+      plugins: './app/_plugins',
+      destination: '.jekyll',
+      bundleExec: true,
+      config: '_config.yml'
+    }))
+});
+
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+      .pipe(deploy({
+        remoteUrl:'git://github.com/webapplications-kr/webapplications.kr.git'
+      }));
+});
+
 // Clean Output Directory
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+gulp.task('clean', del.bind(null, ['.tmp', 'dist', '.jeykyll']));
 
 // Watch Files For Changes & Reload
 gulp.task('serve', ['styles'], function () {
@@ -141,14 +148,15 @@ gulp.task('serve', ['styles'], function () {
     //       will present a certificate warning in the browser.
     // https: true,
     server: {
-      baseDir: ['.tmp', 'app']
+      baseDir: ['.tmp', '.jekyll', 'app']
     }
   });
 
-  gulp.watch(['app/**/*.html'], reload);
-  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['app/**/*.html'], ['jekyll', reload]);
+  gulp.watch(['app/_posts/**/*.md'], ['jekyll', reload]);
+  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', 'jekyll', reload]);
   gulp.watch(['app/scripts/**/*.js'], ['jshint']);
-  gulp.watch(['app/images/**/*'], reload);
+  gulp.watch(['app/images/**/*'], ['jekyll', reload]);
 });
 
 // Build and serve the output from the dist build
@@ -168,7 +176,7 @@ gulp.task('serve:dist', ['default'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('default', ['clean'], function (cb) {
-  runSequence('styles', ['jshint', 'html', 'images', 'fonts', 'copy'], cb);
+  runSequence('styles', ['jshint', 'html', 'images', 'fonts', 'jekyll', 'copy'], cb);
 });
 
 // Run PageSpeed Insights
@@ -178,7 +186,7 @@ gulp.task('pagespeed', pagespeed.bind(null, {
   // free (no API key) tier. You can use a Google
   // Developer API key if you have one. See
   // http://goo.gl/RkN0vE for info key: 'YOUR_API_KEY'
-  url: 'https://example.com',
+  url: 'https://webapplication.kr',
   strategy: 'mobile'
 }));
 

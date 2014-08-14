@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="196x196" href="images/touch/chrome-touch-icon-196x196.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!-- build:css styles/components/main.min.css -->
+    <link rel="stylesheet" href="/styles/h5bp.css">
+    <link rel="stylesheet" href="/styles/components/components.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <header class="app-bar promote-layer">
+      <div class="app-bar-container">
+        <button class="menu"><img src="/images/hamburger.svg" alt="Menu"></button>
+        <h1 class="logo">Web Applications Korea</h1>
+        <section class="app-bar-actions">
+        <!-- Put App Bar Buttons Here -->
+        </section>
+      </div>
+    </header>
+
+    <nav class="navdrawer-container promote-layer">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#get-started">Get Started</a></li>
+        <li><a href="/2014/08/14/aboutus.html">About</a></li>
+      </ul>
+    </nav>
+
+    <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <main>
+
+      {{ content }}
+
+      {% include googleanalytics.html %}
+
+      <footer>
+        <section class="home feeds">
+          <p>
+            The content of this page is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons
+            Attribution 3.0 License</a>, and code samples are licensed under the <a rel="license" href="http://opensource.org/licenses/MIT">MIT License</a>.
+            ©2013 <a href="http://github.com/webapplication-kr">WAKR (Web Applications Korea)</a>
+            and DNS Provider by <a href="http://www.dnsever.com" target="dnsever"><font color="#1111f1">DNS</font><font color="#f11111">Ever</font></a></p>
+          </p>
+        </section>
+      </footer>
+
+    </main>
+
+    <!-- build:js scripts/main.min.js -->
+    <script src="/scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
