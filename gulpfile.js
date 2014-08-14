@@ -132,7 +132,7 @@ gulp.task('jekyll', function() {
 gulp.task('deploy', function () {
   return gulp.src("./dist/**/*")
       .pipe(deploy({
-        remoteUrl:'git://github.com/webapplications-kr/webapplications.kr.git'
+        remoteUrl:'https://github.com/webapplications-kr/webapplications.kr.git'
       }));
 });
 
