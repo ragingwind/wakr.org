@@ -104,7 +104,7 @@ Web Components는 (HTML, CSS, JavaScript을 통해) 통상적으로 구성된 �
 
 
 
-### Web Animations
+### 2. Web Animations
 
 Web Animations는 복잡한 애니메이션을 스크립트로 처리 가능하도록 기존 애니메이션 모델들에 대해 동기화된 API들을 제공하며 기존 4가지 애니메이션 규격에서 처리하기 어려운 부분들을 보완하고 근본적인 구현 사항들을 대체 방안을 제공하는 것이 주요 목적입니다. 이러한 규격을 기초로 얻을 수 있는 가장 큰 장점은 애니메이션 구현에 대한 실행 비용을 브라우저의 구현에 의해 절감할 수 있는 방법이 생긴다는 점 그리고 다양한 애니메이션 기술을 제어하는 공용 API입니다.
 
@@ -171,7 +171,7 @@ Web Animations는 복잡한 애니메이션을 스크립트로 처리 가능하�
 
 
 
-## WebRTC
+## 3. WebRTC
 
 Ajax를 비롯한 HTTP(S) 기반의 통신은 오랜동안 요청/응답(Request and Response) 기반의 모델을 취해왔습니다. 물론 네트워크 데이터의 대부분은 요청에 의한 응답으로 충분히 처리가 가능합니다만, 보다 고성능의 네트워크를 필요로 하는 현대적 서비스들은 이러한 부분에서 어려움을 겪어왔습니다. 이를 해결하기 위한 첫번째 움직임은 2012년 제정된 [Web Socket](http://www.w3.org/TR/websockets/)이었습니다. 그리고 웹 소켓이 해결하지 못하는 P2P 기반의 네트워크를 위한 규격이 바로 WebRTC입니다.
 
@@ -215,7 +215,7 @@ WebRTC는 근본적으로 P2P를 기반으로 하는 데이터 전송 메커니�
 * [WebRTC data channels: WebRTC data channels: for high performance data exchange
 ](http://www.html5rocks.com/ko/tutorials/webrtc/datachannels/)
 
-## Service Worker
+## 4. Service Worker
 
 현재의 네이티브 앱들의 기능과 유사한 형태의 웹 어플리케이션을 구현할 때 가장 난해한 부분은 어떤 것일까요? 아마 그래픽스, 성능, 네트워크 등 다양한 의견이 나올 거이라고 생각됩니다만, 최소한 이들 기능은 현재 HTML5에서의 기능들에 의한 대체제가 존재합니다. 단연컨데 현재 가장 어려운 부분 중의 하나는 `오프라인`입니다. Service Worker는 1차적으로는 이러한 오프라인의 문제를 해결하기 위한 시작점입니다. 물론 Service Worker가 커버하는 범위는 이보다 더 넓습니다만, 요약하자면 **네이티브 어플리케이션의 동작 흐름을 웹으로 가져오기 위한 가장 중요한 기능**이라고 할 수 있겠습니다.
 
