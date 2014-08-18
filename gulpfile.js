@@ -140,7 +140,7 @@ gulp.task('deploy', function () {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist', '.jeykyll']));
 
 // Watch Files For Changes & Reload
-gulp.task('serve', ['styles'], function () {
+gulp.task('serve', ['styles', 'jekyll'], function () {
   browserSync({
     notify: false,
     // Run as an https by uncommenting 'https: true'
