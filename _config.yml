@@ -28,8 +28,9 @@ markdown: kramdown
 pygments: true
 source: './app'
 plugins: './app/_plugins'
-destination: './dist/'
 bundleExec: true
-plugins: ./app/_plugins
 kramdown:
   input: GFM
+permalink: /articles/:title.html
+paginate: 2
+paginate_path: "articles/page:num"
