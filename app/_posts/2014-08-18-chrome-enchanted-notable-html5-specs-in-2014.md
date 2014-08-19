@@ -3,7 +3,7 @@ layout: post
 title: "Chrome Enchanted: Notable HTML5 Specifications in 2014"
 date:   2014-08-18 13:00:00
 categories: HTML5
-post_author: Chang W. Doh
+post_author: cwdoh
 description: "2014년은 HTML5의 정식 Recommended가 예정되어 있습니다. 현재 진행 중인 HTML5 규격들 중  Web Components, Web Animations, WebRTC, ServiceWorker에 대해 개괄적으로 정리해보았습니다."
 published: true
 ---
