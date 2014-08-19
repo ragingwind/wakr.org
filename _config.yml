@@ -12,6 +12,13 @@ authors:
     github: http://github.com/ragingwind
     twitter: http://twitter.com/ragingwind
     googleplus: https://plus.google.com/107574899030973045541/about
+  cwdoh:
+    display_name: Chang W. Doh
+    email: changwook.doh@gmail.com
+    github: http://github.com/cwdoh
+    twitter: http://twitter.com/cwdoh
+    googleplus: https://plus.google.com/+ChangwookDoh/about
+
 # Grunt handles images and assets.
 exclude: ['images', 'styles', 'scripts', 'fonts',
           '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
