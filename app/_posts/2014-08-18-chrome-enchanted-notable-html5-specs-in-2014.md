@@ -4,11 +4,11 @@ title: "Chrome Enchanted: Notable HTML5 Specifications in 2014"
 date:   2014-08-18 13:00:00
 categories: HTML5
 post_author: Chang W. Doh
-description: "2014년은 HTML5의 정식 Recommended가 예정되어 있으며, 개인적으로 기대하고 있는 몇가지 HTML5 새로운 규격들이 라이브되는 시기이기도 합니다. Web Components, Web Animations, WebRTC, ServiceWorker에 대해 개괄적으로 정리해보았습니다."
+description: "2014년은 HTML5의 정식 Recommended가 예정되어 있습니다. 현재 진행 중인 HTML5 규격들 중  Web Components, Web Animations, WebRTC, ServiceWorker에 대해 개괄적으로 정리해보았습니다."
 published: true
 ---
 
-2014년은 HTML5의 정식 Recommended가 예정되어 있으며, 개인적으로 기대하고 있는 몇가지 HTML5 새로운 규격들이 라이브되는 시기이기도 합니다. Web Components, Web Animations, WebRTC, ServiceWorker에 대해 개괄적으로 정리해보았습니다. :)
+2014년은 HTML5의 정식 Recommended가 예정되어 있습니다. 현재 진행 중인 HTML5 규격들 중  Web Components, Web Animations, WebRTC, ServiceWorker에 대해 개괄적으로 정리해보았습니다. :)
 
 ## 2014년에 주목할만한 HTML5 규격들
 
@@ -86,7 +86,9 @@ Web Components는 (HTML, CSS, JavaScript을 통해) 통상적으로 구성된 �
 * [Building Web Apps With Yeoman And Polymer](http://www.html5rocks.com/ko/tutorials/webcomponents/yeoman/)
 * [웹 컴포넌트: 차세대 프론트엔드 웹 개발로 가는 관문](http://html5rocksko.blogspot.kr/2014/02/mashup-web-component-evolution-of-web-development.html)
 
-## Web Animations
+
+
+## 2. Web Animations
 
 오랜동안 웹에서의 애니메이션은 플래시 플레이어가 차지하고 있었습니다만, HTML5 이전에도 SVG(Scalable Vector Graphics)는 자체적인 애니메이션을 구현할 수 있는 방법이 존재하였고 HTML5에 이르러서는 CSS3 Animation과 Transition이 추가되었습니다. 하지만 왜 또 새로운 애니메이션 규격이 제안되었을까요?
 
@@ -102,9 +104,7 @@ Web Components는 (HTML, CSS, JavaScript을 통해) 통상적으로 구성된 �
 
 특히 동적인 애니메이션 제어를 자바스크립트에 위임하는 모델은 확실히 자유도가 높지만 메인 스레드를 점유한다는 선천적인 문제점 그리고 애초에 제어가 불가능한 애니메이션 요소들이 존재하고, CSS 스타일(특히 inline style)에 의한 Recalculation, Layouting, Repaint 등의 이슈를 근본적으로 해결할 수 있는 방법은 아니라는 문제가 있으므로 기존의 규격으로 좋은 성능을 가지는 애니메이션을 개발하는 것은 무척 어렵습니다. 더불어 가장 큰 문제점은 이러한 여러가지 애니메이션 모델을 쉽게 제어할 수 있도록 설계된 단일화된 모델이 존재하지 않는다는 것입니다.
 
-
-
-### 2. Web Animations
+### Web Animations
 
 Web Animations는 복잡한 애니메이션을 스크립트로 처리 가능하도록 기존 애니메이션 모델들에 대해 동기화된 API들을 제공하며 기존 4가지 애니메이션 규격에서 처리하기 어려운 부분들을 보완하고 근본적인 구현 사항들을 대체 방안을 제공하는 것이 주요 목적입니다. 이러한 규격을 기초로 얻을 수 있는 가장 큰 장점은 애니메이션 구현에 대한 실행 비용을 브라우저의 구현에 의해 절감할 수 있는 방법이 생긴다는 점 그리고 다양한 애니메이션 기술을 제어하는 공용 API입니다.
 
@@ -215,9 +215,11 @@ WebRTC는 근본적으로 P2P를 기반으로 하는 데이터 전송 메커니�
 * [WebRTC data channels: WebRTC data channels: for high performance data exchange
 ](http://www.html5rocks.com/ko/tutorials/webrtc/datachannels/)
 
+
+
 ## 4. Service Worker
 
-현재의 네이티브 앱들의 기능과 유사한 형태의 웹 어플리케이션을 구현할 때 가장 난해한 부분은 어떤 것일까요? 아마 그래픽스, 성능, 네트워크 등 다양한 의견이 나올 거이라고 생각됩니다만, 최소한 이들 기능은 현재 HTML5에서의 기능들에 의한 대체제가 존재합니다. 단연컨데 현재 가장 어려운 부분 중의 하나는 `오프라인`입니다. Service Worker는 1차적으로는 이러한 오프라인의 문제를 해결하기 위한 시작점입니다. 물론 Service Worker가 커버하는 범위는 이보다 더 넓습니다만, 요약하자면 **네이티브 어플리케이션의 동작 흐름을 웹으로 가져오기 위한 가장 중요한 기능**이라고 할 수 있겠습니다.
+현재의 네이티브 앱들의 기능과 유사한 형태의 웹 어플리케이션을 구현할 때 가장 난해한 부분은 어떤 것일까요? 아마 그래픽스, 성능, 네트워크 등 다양한 의견이 나오리라 생각됩니다만, 단언컨데 현재 가장 어려운 부분 중의 하나는 `오프라인`입니다. Service Worker는 1차적으로는 이러한 오프라인의 문제를 해결하기 위한 시작점입니다. 물론 Service Worker가 커버하는 범위는 이보다 더 넓습니다. 비유하자면 **네이티브 어플리케이션의 동작 흐름을 웹으로 가져오기 위한 가장 중요한 기능**이라고 할 수 있겠습니다.
 
 ### 오프라인을 지원하기 위한 두번째 규격
 
@@ -233,12 +235,11 @@ Application Cache의 경우 캐싱 처리를 정적인 분기 로직을 기반�
 4. 절대로 한참 후의 manifest를 캐시하지 않는다.
 5. 캐싱되지 않은 리소스는 캐시된 페이지에서 로딩되지 않는다.
 
-![Offline](http://cwdoh.com/images/notable-specs-2014/OMG.appcache.png)
+![Offline](/images/notable-specs-2014/OMG.appcache.png)
 
 서비스 워커는 이를 해결하기 위해 프로그램 가능(Programmable)한 오프라인 리소스의 근본적인 처리 방법을 제시합니다. 브라우저에서 일어나는 요청(Request)들을 조건에 따라 인터럽트하여 직접 응답(Custom response)할 수 있는 기능을 통해 사용자가 직접 리소스를 관리할 수 있습니다. 따라서 캐시 로직은 사용자가 직접 작성이 가능하며 언제든지 업데이트할 수 있습니다.
 
-![Service Worker - Controlling fetch flow](http://cwdoh.com/images/notable-specs-2014/serviceworker_cache_flow.png)
-
+![Service Worker - Controlling fetch flow](/images/notable-specs-2014/serviceworker_cache_flow.png)
 
 #### 페이지 기반이 아닌 백그라운드 기반의 프로세싱 지원
 
@@ -250,9 +251,9 @@ Application Cache의 경우 캐싱 처리를 정적인 분기 로직을 기반�
 2. [Task Schedular API(a.k.a. Local alarm)](http://www.w3.org/2012/sysapps/web-alarms/)
 3. [Background Synchronization](https://github.com/slightlyoff/BackgroundSync)
 
-### 가장 큰 패러다임 변화가 예상
+### 웹 개발 패러다임 변화의 가능성
 
-`서비스 워커`는 `웹 컴포넌트`와 마찬가지로 네이티브 어플리케이션 개발자 입장에서는 익숙한 개념들을 가지고 있습니다. 다만, `웹 컴포넌트`가 컴포넌트의 재사용성을 추구하는 개념이라면 `서비스 워커`는 웹 어플리케이션의 근본적인 한계를 탈출하기 위한 내용을 담고 있습니다. 반대로 보자면 웹 어플리케이션 개발자 관점에서는 다소 익숙하지 않은 형태의 많은 개발 형태를 예고하고 있습니다. 하지만, 웹 어플리케이션의 오프라인 기능 지원이 일반화되고 있는 지금 반드시 익숙해져야 하는 대표적인 기능이기도 합니다.
+`서비스 워커`는 `웹 컴포넌트`와 마찬가지로 네이티브 어플리케이션 개발자 입장에서는 익숙한 개념들을 가지고 있습니다. 다만, `웹 컴포넌트`가 컴포넌트의 재사용성을 추구하는 개념이라면 `서비스 워커`는 웹 어플리케이션의 근본적인 한계를 탈출하기 위한 내용을 담고 있습니다. 반대로 보자면 웹 어플리케이션 개발자 관점에서는 다소 익숙하지 않은 형태의 많은 개발 형태를 예고하고 있습니다. 특히 서비스 워커는 시각적인 기능을 가지고 있지는 않습니다만, 이로 인해 가능해지는 많은 기능들이 네이티브 어플리케이션에서 많이 활용되는 기능들이므로 아마도 웹 어플리케이션 개발에 있어 큰 패러다임 변화를 이끌어낼 가능성이 있다고 보입니다. 따라서, 웹 어플리케이션의 오프라인 기능 지원이 시작되고 있는 지금 반드시 익숙해져야 하는 대표적인 기능이기도 합니다.
 
 서비스 워커는 그 특성상 폴리필 라이브러리를 제공할 수 없습니다만, 현재 크롬이 서비스워커의 첫번째 네이티브 구현을 포함하고 있습니다. 아직 캐시 API는 폴리필 형태로 제공하고 있습니다만, 대체적인 기능은 현재도 사용이 가능합니다. Google I/O 2014에서 폴리머 데모로 소개된 [Topeka](http://www.polymer-project.org/apps/topeka/)는 로딩 타임의 제거를 위해 [모든 리소스를 초기에 로딩하는 기능을 서비스 워커로 구현](http://www.polymer-project.org/apps/topeka/sw.js)하고 있습니다. 코드를 참조하시는 것만으로도 충분하게 기능을 확인해 볼 수 있을 것입니다.
 
@@ -271,19 +272,6 @@ Application Cache의 경우 캐싱 처리를 정적인 분기 로직을 기반�
 * [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 * [Service Worker: Bring your own magic! (Slide)](http://www.slideshare.net/jungkees/service-workers)
 * [ServiceWorker: New Game Changer is coming! (Slide)](http://www.slideshare.net/cwdoh/serviceworker-new-game-changer-is-coming)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- References -->
