@@ -35,7 +35,7 @@ categories: digests
 
 ### Web Components
 
-- [platform.js ⇒ webcomponents.js](http://goo.gl/eUKygh): Polymer 의 Web components polyfill 인 platform.js 를 [webcomponents.org](http://webcomponents.org) 로 이전하면서 이름도 `webcomponents.js` 로 변
+- [platform.js ⇒ webcomponents.js](http://goo.gl/eUKygh): Polymer 의 Web components polyfill 인 platform.js 를 [webcomponents.org](http://webcomponents.org) 로 이전하면서 이름도 `webcomponents.js` 로 변경
 - [Release Stable Release 0.5.1: A few hotfixes · Polymer/polymer](http://goo.gl/h9Eu5J): Polymer 0.5.1 릴리즈, Object.observe 가 지원되지 않는 브라우저의 탭이 보여지지지 않는 경우 dirty-check 하는 것을 중지, paper-item 에서 별도로 지정되는 icon label attribute 를 제
 - [Built with Polymer](http://goo.gl/SJbeQJ): Polymer 로 만들어진 어플리케이션 모음
 - [Polycasts: Core Icons with Rob Dodson - YouTube](http://goo.gl/xXj7qq): Polymer 팀의 [Rod dodson](https://twitter.com/rob_dodson) 이 진행하는 Polycast 시리즈. 2014 년 11 월에 전 세계적으로 있었던 Polytechinc 행사와 같은 선상에서 제공되는 Polymer materials
@@ -47,6 +47,7 @@ categories: digests
   - [Upgrading Your Syntax Theme](http://goo.gl/jRxpBc) Shadow DOM 을 사용하는 Atom
   - [Daily Material Design Inspiration - MaterialUp](http://goo.gl/G9sI3E): Material Design 을 적용한 앱소개
   - [Polymer Material Design Playground](http://goo.gl/Oq83DM): Eric bidelman 의 Polymer Material Deisn 소개
+
 ### Javascripts and ES 6
 
 - [Why Asana is switching to TypeScript - Asana Engineering Blog](http://goo.gl/40vsA4): Asana 가 Typescript 를 사용
