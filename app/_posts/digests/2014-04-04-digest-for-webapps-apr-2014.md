@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Monthly Digest for Web Applications"
+title:  "Digest for Web applications, Apr, 2014"
 post_author: ragingwind
+categories: digests
 ---
 
-```Monthly Digest for Web Applications``` 에서는 Web Applications 개발에 관련된 소식을 모아서 간단한 코멘트와 함께 전달해 드립니다.
+```Digest for Web Applications``` 에서는 Web Applications 개발에 관련된 소식을 모아서 간단한 코멘트와 함께 전달해 드립니다.
 
 ## Chrome Apps
 - [Minimize button for Window](http://goo.gl/34GqKt): minimize button 이 드디어? #dev, #chromeos

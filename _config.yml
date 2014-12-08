@@ -38,6 +38,6 @@ plugins: './app/_plugins'
 bundleExec: true
 kramdown:
   input: GFM
-permalink: /articles/:title.html
+permalink: /posts/:categories/:title.html
 paginate: 2
-paginate_path: "articles/page:num"
+paginate_path: "posts/:categories/page:num"
