@@ -1,6 +1,10 @@
-# Web Applications Korea
+# [Web Applications Korea](http://webapplications.kr/)
 
-Web Applications Korea helps you make (Natively) Web Application. We'll publish insightful presentations, articles and news related with Web Application. The site made based on [Web Starter Kit](http://developers.google.com/web/starter-kit), [Jekyll](http://jekyllrb.com/) and [gulp.js](http://gulpjs.com). If you need more information about installation? Please visit [quickstart](https://github.com/google/web-starter-kit#quickstart) of Web starter kit
+Web Applications Korea is all about bringing native web application closer to developers. We compilie and publish insightful presentations, articles and news on web application on regular basis. 
+
+## Installation
+
+The site was built using [Web Starter Kit](http://developers.google.com/web/starter-kit), [Jekyll](http://jekyllrb.com/) and [gulp.js](http://gulpjs.com). If you need any help on installation, please refer to  [quickstart](https://github.com/google/web-starter-kit#quickstart) guide.
 
 ## Gulp Commands
 
