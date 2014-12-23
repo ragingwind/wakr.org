@@ -132,7 +132,7 @@ gulp.task('jekyll', function() {
 gulp.task('deploy', function () {
   return gulp.src("./dist/**/*")
       .pipe(deploy({
-        remoteUrl:'https://github.com/webapplications-kr/webapplications.kr.git'
+        remoteUrl:'https://github.com/wakrorg/wakr.org.git'
       }));
 });
 
@@ -186,7 +186,7 @@ gulp.task('pagespeed', pagespeed.bind(null, {
   // free (no API key) tier. You can use a Google
   // Developer API key if you have one. See
   // http://goo.gl/RkN0vE for info key: 'YOUR_API_KEY'
-  url: 'https://webapplication.kr',
+  url: 'https://wakr.org',
   strategy: 'mobile'
 }));
 
