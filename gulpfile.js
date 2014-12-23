@@ -137,7 +137,7 @@ gulp.task('deploy', function () {
 });
 
 // Clean Output Directory
-gulp.task('clean', del.bind(null, ['.tmp', 'dist', '.jeykyll']));
+gulp.task('clean', del.bind(null, ['.tmp', 'dist', '.jekyll']));
 
 // Watch Files For Changes & Reload
 gulp.task('serve', ['styles', 'jekyll'], function () {
@@ -176,7 +176,7 @@ gulp.task('serve:dist', ['default'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('default', ['clean'], function (cb) {
-  runSequence('styles', ['jshint', 'html', 'images', 'fonts', 'jekyll', 'copy'], cb);
+  runSequence('styles', 'jekyll', ['jshint', 'html', 'images', 'fonts', 'copy'], cb);
 });
 
 // Run PageSpeed Insights
