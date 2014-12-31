@@ -27,6 +27,6 @@ categories: digests
 - [The Roboto font can now be used as the default system font in the last Dev…](http://goo.gl/808OA0 ) Roboto font 가 Chrome OS에 기본으로 점점 더 가까이
 - [goldfire/howler.js](http://goo.gl/3i5amw ) 모던웹앱을 위한 Web Audio 라이브러리
 - [auchenberg/chrome-devtools-app](http://goo.gl/7akwbl ) 별도의 앱으로 사용가능한 chrome-devtools 여러개의 탭을 디버깅할때 용이할 듯
-- [Web Componentsを簡単・便利にするライブラリ「Polymer」を使いこなそう | HTML5Experts.jp](http://goo.gl/xjuAJV): WebComponents를 쉽고 편리하게 Polymer과 친해지기
-- [Unit Testing Polymer Elements:…](http://goo.gl/vPUhIj ) 새로운 Polymer 용 Unittest tool. WCT (web-component-tester) 나온지는 좀 되었 ..
-- - [Native Web Application | A.J](http://goo.gl/IOOdN5): ASM.JS와 JavaScript/HTML5를 사용한 Native Web Application 제작 보고서
+- [Web Componentsを簡単・便利にするライブラリ Polymer」を使いこなそう - HTML5Experts.jp](http://goo.gl/xjuAJV): WebComponents를 쉽고 편리하게 Polymer과 친해지기
+- [Unit Testing Polymer Elements](http://goo.gl/vPUhIj ) 새로운 Polymer 용 Unittest tool. WCT (web-component-tester) 나온지는 좀 되었 ..
+- [Native Web Application - A.J](http://goo.gl/IOOdN5): ASM.JS와 JavaScript/HTML5를 사용한 Native Web Application 제작 보고서
