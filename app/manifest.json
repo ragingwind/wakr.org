@@ -1,0 +1,10 @@
+{
+  "name": "Web Applications Korea",
+  "short_name": "WAKR.ORG",
+  "icons": [{
+    "src": "/apple-touch-icon-precomposed.png",
+    "sizes": "128x128"
+  }],
+  "start_url": "/index.html?homescreen=1",
+  "display": "standalone"
+}
