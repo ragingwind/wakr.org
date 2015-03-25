@@ -1,6 +1,0 @@
-node_modules
-.sass-cache
-dist
-.tmp
-.jekyll
-Gemfile.lock
