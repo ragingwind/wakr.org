@@ -84,7 +84,6 @@ gulp.task('styles', function () {
       'app/styles/**/*.css',
       'app/styles/components/components.scss'
     ])
-    .pipe($.changed('.tmp/styles', {extension: '.css'}))
     .pipe($.if('*.scss', $.rubySass({
       style: 'expanded',
       precision: 10

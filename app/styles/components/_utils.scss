@@ -64,7 +64,7 @@
   $fontSmall: 13px !default;
   $fontBase: 16px  !default;
   $fontMedium: 20px !default;
-  $fontLarge: 26px !default;
+  $fontLarge: 32px !default;
   $fontXLarge: 42px !default;
   $fontXXLarge: 68px !default;
   $fontHuge: 110px !default;
@@ -175,9 +175,8 @@
 
   // Mixins simply to store CSS rules
   @mixin rule--small {
-    font-size: $fontSmall;
+    font-size: $fontMedium;
     line-height: 2.0000em; /* 26px */
-    padding-top: 2.0000em;
     padding-bottom: 0;
   }
 
@@ -193,7 +192,7 @@
     font-weight: 300;
     line-height: 1.3000em; /* 26px */
     padding-top: 1.3000em;
-    padding-bottom: 0;
+    padding-bottom: 0.6em;
   }
 
   @mixin rule--large {
@@ -202,7 +201,7 @@
     font-weight: 300;
     line-height: 1.0000em; /* 26px */
     padding-top: 1.0000em;
-    padding-bottom: 0;
+    padding-bottom: 1.0000em;
   }
 
   @mixin rule--xlarge {
